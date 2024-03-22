@@ -15,7 +15,7 @@ public class LoginDefinitions {
     }
     @Dado("que el usuario ingresa a la página de login")
     public void queElUsuarioIngresaALaPáginaDeLogin() {
-        Hooks.getDriver().get("https://opencart.abstracta.us/");
+        Hooks.getDriver().get(Hooks.getProperty("url"));
 
         homePage.clickMyAccount();
         homePage.clickLoginDropdown();
@@ -24,5 +24,10 @@ public class LoginDefinitions {
     @Cuando("el usuario se loguea con credenciales válidas")
     public void elUsuarioSeLogueaConCredencialesVálidas() {
         loginPage.login("navarro754@gmail.com","7libertadores");
+    }
+
+    @Cuando("el usuario se loguea con credenciales inválidas")
+    public void elUsuarioSeLogueaConCredencialesInválidas() {
+        loginPage.login(Hooks.getProperty("username"),Hooks.getProperty("password"));
     }
 }
