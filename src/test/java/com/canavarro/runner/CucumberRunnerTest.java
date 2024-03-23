@@ -6,7 +6,8 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
     features = "src/test/resources/features",
     glue = {"com.canavarro.stepDefinitions","com.canavarro.hooks"},
-    snippets = CucumberOptions.SnippetType.CAMELCASE
+    snippets = CucumberOptions.SnippetType.CAMELCASE,
+    tags = "@FAV-123"
     )
 public class CucumberRunnerTest extends AbstractTestNGCucumberTests {
 

@@ -5,6 +5,7 @@ import com.canavarro.pages.HomePage;
 import com.canavarro.pages.LoginPage;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
+import io.cucumber.java.es.Y;
 
 public class LoginDefinitions {
     private HomePage homePage;
@@ -28,6 +29,14 @@ public class LoginDefinitions {
 
     @Cuando("el usuario se loguea con credenciales inválidas")
     public void elUsuarioSeLogueaConCredencialesInválidas() {
+        loginPage.login(Hooks.getProperty("username"),Hooks.getProperty("password"));
+    }
+
+    @Y("el usuario se loguea en la aplicacion")
+    public void elUsuarioSeLogueaEnLaAplicacion() {
+        homePage.clickMyAccount();
+        homePage.clickLoginDropdown();
+
         loginPage.login(Hooks.getProperty("username"),Hooks.getProperty("password"));
     }
 }

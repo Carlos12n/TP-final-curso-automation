@@ -5,6 +5,8 @@ import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -63,6 +65,12 @@ public class Hooks {
         return new ChromeDriver(options);
     }
     public WebDriver getFirexfoxDriver(){
-        return null;
+        FirefoxOptions options = new FirefoxOptions();
+
+        options.addArguments("--private");
+        options.setPageLoadTimeout(Duration.ofSeconds(60));
+        System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/drivers/geckodriver.exe");
+
+        return new FirefoxDriver(options);
     }
 }
