@@ -2,7 +2,7 @@
 
   Característica: Favoritos
 
-    @FAV-123
+
     Escenario: Agregar producto a favoritos
       Dado que el usuario ingresa a la pantalla de inicio
       Y el usuario se loguea en la aplicacion
