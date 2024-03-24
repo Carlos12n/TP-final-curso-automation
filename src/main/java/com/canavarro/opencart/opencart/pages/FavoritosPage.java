@@ -9,7 +9,7 @@ public class FavoritosPage extends BasePage{
            // By.xpath("//div[./div/h4/a[text()=\"Canon EOS 5D\"]]/div/button[@data-original-title=\"Add to Wish List\"]");
     //otra opcion lo de arriba
     private By wishlistButton = By.id("wishlist-total");
-    private By canonCamera = By.xpath("//td/a[text()=\"Canon EOS 5D\"]");
+    private By canonCamera = By.xpath("//td[text()=\"Product 3\"]");
 
     public FavoritosPage(WebDriver driver) {
         super(driver);
