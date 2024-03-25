@@ -31,7 +31,7 @@ public class RegisterDefinitions {
 
     @Cuando("el usuario se registra con datos válidas")
     public void elUsuarioSeRegistraConDatosVálidas() {
-        registerPage.completarFormulario("Lucas","Rodrigues","lucasR1588_90@gmail.com","555879","1234");
+        registerPage.completarFormulario("Lucas","Rodrigues","lucasR1588_92@gmail.com","555879","1234");
     }
 
     @Entonces("el usuario se encuentra registrado")

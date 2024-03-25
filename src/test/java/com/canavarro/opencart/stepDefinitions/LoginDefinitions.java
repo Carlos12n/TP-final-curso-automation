@@ -26,12 +26,12 @@ public class LoginDefinitions {
 
     @Cuando("el usuario se loguea con credenciales válidas")
     public void elUsuarioSeLogueaConCredencialesVálidas() {
-        loginPage.login("lucasR1588_@gmail.com","1234");
+        loginPage.login("lucasR1588_91@gmail.com","1234");
     }
 
     @Cuando("el usuario se loguea con credenciales inválidas")
     public void elUsuarioSeLogueaConCredencialesInválidas() {
-        loginPage.login("pedro@yahoo.com","7libertadores");
+        loginPage.login("pedro1@yahoo.com","7libertadores");
     }
 
     @Y("el usuario se loguea en la aplicacion")
